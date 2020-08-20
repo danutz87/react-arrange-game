@@ -25,12 +25,11 @@ class StartMenu extends Component {
     return (
       <div>
         <label className="dimension-label">Choose game dimension</label>
-        <br />
         <Select
           options={gameDimensions}
           onChange={this.props.setGameDimension}
         />
-      </div>
+        </div>
     );
   }
 }

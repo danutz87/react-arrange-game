@@ -27,8 +27,9 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
-    "react": "16.2",
-    "react-dom": "16.2",
+    "@emotion/core": "^10.0.35",
+    "react": "16.8.0",
+    "react-dom": "16.8.0",
     "react-select": "^3.1.0"
   },
   "scripts": {

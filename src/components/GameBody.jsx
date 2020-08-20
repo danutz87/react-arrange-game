@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import StartMenu from './StartMenu';
+import WinnerMessage from './WinnerMessage';
 
 class GameBody extends Component {
   constructor(props) {
@@ -26,7 +27,7 @@ class GameBody extends Component {
   }
 
   setGameDimension(selectedDimension) {
-    let initialArray = [];
+    const initialArray = [];
     for (let i = 0; i < Math.pow(selectedDimension.value, 2); i++) {
       initialArray[i] = i;
     }
@@ -40,10 +41,7 @@ class GameBody extends Component {
       gameData: initialArray
         .sort(() => Math.random() - 0.5)
         .reduce(
-          (rows, key, index) =>
-            (index % selectedDimension.value === 0
-              ? rows.push([key])
-              : rows[rows.length - 1].push(key)) && rows,
+          (rows, key, index) => (index % selectedDimension.value === 0 ? rows.push([key]) : rows[rows.length - 1].push(key)) && rows,
           []
         )
     }));
